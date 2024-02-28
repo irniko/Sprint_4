@@ -33,10 +33,10 @@ public class HomePage {
         return this;
     }
 
-    public String checkQuestionAndAnswer(String questionText, String answerText) {
+    public String checkQuestionAndAnswer(String questionText) {
 
         List<WebElement> elements = driver.findElements(By.xpath(".//div[@class = 'accordion__item']"));
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 8; i++) {
             if (Objects.equals(elements.get(i).findElement(quastionTextLocator).getText(), questionText)) {
                 //найти локатор ответа из этого вопроса
                 elements.get(i).findElement(quastionTextLocator).click();
